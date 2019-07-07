@@ -45,7 +45,7 @@
       </div>
       <div id="pop">
           <button style="font-size: 130%">
-            <a href="intent://play/#Intent;scheme:https;package=com.mayank.krishnaapps.lksringtones;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.mayank.krishnaapps.lksringtones;end">Open in Application</a>
+            <a id="int">Open in Application</a>
             </button>
       </div>
       <style>
@@ -100,6 +100,9 @@
           var ua = navigator.userAgent.toLowerCase();
           var isAndroid = ua.indexOf("android") > -1;
           if(isAndroid){
+            var s = "intent://play/#Intent;scheme:https;package=com.mayank.krishnaapps.lksringtones;extra:" + r +
+                 "S.browser_fallback_url=https%3A%2F%2Fplay.google.com/store/apps/details?id=com.mayank.krishnaapps.lksringtones;end"
+            document.getElementById("int").href = s;
             var a = document.getElementById("pop");
             a.style.display = "block"
           }
