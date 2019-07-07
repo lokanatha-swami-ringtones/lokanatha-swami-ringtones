@@ -61,7 +61,7 @@
         }
           .content{
               position: relative;
-              width: 75%;
+              width: 85%;
               margin: auto;
               padding-top: 350px;
               overflow: auto;
@@ -102,7 +102,7 @@
           if(isAndroid){
             var s = "intent://play/#Intent;scheme:https;package=com.mayank.krishnaapps.lksringtones;extra:" + r +
                  "S.browser_fallback_url=https%3A%2F%2Fplay.google.com/store/apps/details?id=com.mayank.krishnaapps.lksringtones;end"
-            document.getElementById("int").href = s;
+            document.getElementById("int").href = window.location;
             var a = document.getElementById("pop");
             a.style.display = "block"
           }
